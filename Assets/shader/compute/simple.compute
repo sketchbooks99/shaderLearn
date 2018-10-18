@@ -1,0 +1,29 @@
+﻿// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel CSMain
+#pragma kernel CSMain2
+
+// Create a RenderTexture with enableRandomWrite flag and set it
+// with cs.SetTexture
+// RWTexture2D<float4> Result;
+RWStructuredBuffer<int> Result;
+
+// 実行されるスレッド数は 8*8*1 = 64
+// カーネルのインデックスは 0
+// SV_GroupThreadID...実行しているグループ内のスレッドID
+// SV_GroupID...スレッド群を管理しているスレッドグループのID
+// SV_DispatchThreadID...実行中のスレッドIDを一意に特定できるID
+// ->(計算式) = (SV_GroupID * numthreads(スレッドの大きさ)) + SV_GroupThreadID
+[numthreads(8,8,1)]
+void CSMain (int3 id : SV_DispatchThreadID)
+{
+	// Result[id.xy] = float4(id.x & id.y, (id.x & 15)/15.0, (id.y & 15)/15.0, 0.0);
+    Result[id.x] = id.x;
+}
+
+// 実行されるスレッド数は 4*1*1 = 4
+// カーネルのインデックスは 1
+[numthreads(4,1,1)]
+void CSMain2 (uint3 groupID : SV_GroupID,uint3 groupThreadID : SV_GroupThreadID)
+{
+    Result[groupThreadID.x] += 1;
+}

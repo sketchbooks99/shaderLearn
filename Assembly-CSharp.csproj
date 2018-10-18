@@ -61,10 +61,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\cube.cs" />
-    <Compile Include="Assets\FaceTo.cs" />
-    <None Include="Assets\dissolve.shader" />
-    <None Include="Assets\sample.shader" />
+    <Compile Include="Assets\script\computeExample.cs" />
+    <Compile Include="Assets\script\computeTexture.cs" />
+    <Compile Include="Assets\script\cube.cs" />
+    <Compile Include="Assets\script\FaceTo.cs" />
+    <None Include="Assets\shader\compute\simple.compute" />
+    <None Include="Assets\shader\surface\dissolve.shader" />
+    <None Include="Assets\shader\surface\sample.shader" />
+    <None Include="Assets\shader\unlit(frag&amp;vert)\outline.shader" />
+    <None Include="Assets\shader\compute\sampleTexture.compute" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>/Users/kiuchishunshi/Shader Learn/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
