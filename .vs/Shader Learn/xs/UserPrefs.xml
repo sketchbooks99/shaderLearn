@@ -1,6 +1,6 @@
 ﻿<Properties StartupConfiguration="{B20898F8-0835-F45E-D094-40CB4B996725}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/shader/unlit(frag&amp;vert)/outline.shader">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/shader/surface/dissolve.shader">
     <Files>
       <File FileName="Assets/shader/compute/simple.compute" Line="15" Column="68" />
       <File FileName="Assets/script/computeExample.cs" Line="23" Column="26" />
@@ -8,8 +8,9 @@
       <File FileName="Assets/shader/surface/dissolve.shader" Line="69" Column="51" />
       <File FileName="Assets/script/computeTexture.cs" Line="37" Column="63" />
       <File FileName="Assets/script/cube.cs" Line="10" Column="6" />
-      <File FileName="Assets/script/FaceTo.cs" Line="17" Column="11" />
-      <File FileName="Assets/shader/unlit(frag&amp;vert)/outline.shader" Line="25" Column="27" />
+      <File FileName="Assets/script/FaceTo.cs" Line="17" Column="117" />
+      <File FileName="Assets/shader/unlit(frag&amp;vert)/outline.shader" Line="45" Column="16" />
+      <File FileName="Assets/shader/surface/sample.shader" Line="24" Column="43" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FaceTo : MonoBehaviour {
 
-    public GameObject sphere;
+    public GameObject skull;
     public Camera mainCamera;
 
 	// Use this for initialization
@@ -14,7 +14,7 @@ public class FaceTo : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        this.mainCamera.transform.position = new Vector3(Mathf.Sin(Time.time)*3.0f, 0.0f, Mathf.Cos(Time.time) * 3.0f);
-        this.mainCamera.transform.LookAt(sphere.transform);
+        this.mainCamera.transform.position = new Vector3(Mathf.Sin(Time.time)*50.0f, 5.0f, Mathf.Cos(Time.time) * 50.0f);
+        this.mainCamera.transform.LookAt(skull.transform);
     }
 }
